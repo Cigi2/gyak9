@@ -19,7 +19,7 @@ namespace gyak9.Controllers
 
         // GET api/<JokeController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
             FunnyDatabaseContext context = new FunnyDatabaseContext();
             var keresettVicc = (from x in context.Jokes
